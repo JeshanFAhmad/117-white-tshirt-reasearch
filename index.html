@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everyday | Research</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.min.js"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #222;
+        }
+
+        header {
+            background-color: white;
+            padding: 25px 8%;
+            border-bottom: 1px solid #ddd;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        header p {
+            margin-bottom: 0;
+            color: #777;
+        }
+
+        nav {
+            background-color: #222;
+            padding: 15px 8%;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 25px;
+        }
+
+        main {
+            max-width: 950px;
+            margin: 40px auto;
+            padding: 35px;
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        #researchContent {
+            line-height: 1.7;
+        }
+
+        #researchContent h1,
+        #researchContent h2,
+        #researchContent h3 {
+            color: #222;
+            margin-top: 30px;
+        }
+
+        #researchContent a {
+            color: #555;
+        }
+
+        #researchContent table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        #researchContent th,
+        #researchContent td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        #researchContent th {
+            background-color: #eee;
+        }
+
+        .status {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #222;
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-right: 8px;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #777;
+        }
+
+        @media (max-width: 600px) {
+            main {
+                margin: 20px 12px;
+                padding: 20px;
+            }
+
+            header, nav {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>EVERYDAY</h1>
+        <p>Simple Clothing. Everyday Wear.</p>
+    </header>
+
+    <nav>
+        <a href="#research">Research</a>
+    </nav>
+
+    <main id="research">
+
+        <h2>Product Research</h2>
+
+        <p class="status" id="status">
+            Loading research...
+        </p>
+
+        <button onclick="loadResearch()">
+            Refresh Research
+        </button>
+
+        <button onclick="clearResearch()">
+            Clear Saved Copy
+        </button>
+
+        <div id="researchContent"></div>
+
+    </main>
+
+    <footer>
+        <p>Everyday &copy; 2026</p>
+    </footer>
+
+    <script>
+
+        async function loadResearch() {
+
+            const content = document.getElementById("researchContent");
+            const status = document.getElementById("status");
+
+            try {
+
+                status.textContent = "Loading Research.md...";
+
+                const response = await fetch("Research.md");
+
+                if (!response.ok) {
+                    throw new Error("Research.md could not be found.");
+                }
+
+                const researchText = await response.text();
+
+                // Save research in localStorage
+                localStorage.setItem("everydayResearch", researchText);
+
+                // Convert Markdown into HTML
+                const formattedResearch = marked.parse(researchText);
+
+                // Display the research
+                content.innerHTML = DOMPurify.sanitize(formattedResearch);
+
+                status.textContent = "Research loaded and saved successfully.";
+
+            } catch (error) {
+
+                // Try loading the previously saved research
+                const savedResearch = localStorage.getItem("everydayResearch");
+
+                if (savedResearch) {
+
+                    content.innerHTML = DOMPurify.sanitize(
+                        marked.parse(savedResearch)
+                    );
+
+                    status.textContent = "Displaying previously saved research.";
+
+                } else {
+
+                    status.textContent = error.message;
+
+                    content.textContent =
+                        "Make sure Research.md is in the same folder as index.html.";
+                }
+            }
+        }
+
+        function clearResearch() {
+
+            localStorage.removeItem("everydayResearch");
+
+            document.getElementById("researchContent").innerHTML = "";
+
+            document.getElementById("status").textContent =
+                "Saved research copy cleared. Refresh to load the file again.";
+        }
+
+        // Load research when the website opens
+        loadResearch();
+
+    </script>
+
+</body>
+</html>
