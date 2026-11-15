@@ -176,20 +176,17 @@
 
           status.textContent = "Research loaded successfully.";
         } catch (error) {
-
           const savedResearch = localStorage.getItem("everydayResearch");
 
           if (savedResearch) {
             content.innerHTML = DOMPurify.sanitize(marked.parse(savedResearch));
 
             status.textContent = "Displaying previously saved research.";
-    
           } else {
-      
             status.textContent = error.message;
-            content.textContent = "Research could not be loaded. Check that Research.md is in the repository root.";
-    
-          } 
+            content.textContent =
+              "Research could not be loaded. Check that Research.md is in the repository root.";
+          }
         }
       }
 
