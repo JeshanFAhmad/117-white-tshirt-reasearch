@@ -160,40 +160,36 @@
         const status = document.getElementById("status");
 
         try {
-          status.textContent = "Loading Research.md...";
+          status.textContent = "Loading research...";
 
-          const response = await fetch("Research.md");
+          const response = await fetch("./Research.md");
 
           if (!response.ok) {
-            throw new Error("Research.md could not be found.");
+            throw new Error("Could not find Research.md.");
           }
 
           const researchText = await response.text();
 
-          // Save research in localStorage
           localStorage.setItem("everydayResearch", researchText);
 
-          // Convert Markdown into HTML
-          const formattedResearch = marked.parse(researchText);
+          content.innerHTML = DOMPurify.sanitize(marked.parse(researchText));
 
-          // Display the research
-          content.innerHTML = DOMPurify.sanitize(formattedResearch);
-
-          status.textContent = "Research loaded and saved successfully.";
+          status.textContent = "Research loaded successfully.";
         } catch (error) {
-          // Try loading the previously saved research
+
           const savedResearch = localStorage.getItem("everydayResearch");
 
           if (savedResearch) {
             content.innerHTML = DOMPurify.sanitize(marked.parse(savedResearch));
 
             status.textContent = "Displaying previously saved research.";
+    
           } else {
+      
             status.textContent = error.message;
-
-            content.textContent =
-              "Make sure Research.md is in the same folder as index.html.";
-          }
+            content.textContent = "Research could not be loaded. Check that Research.md is in the repository root.";
+    
+          } 
         }
       }
 
