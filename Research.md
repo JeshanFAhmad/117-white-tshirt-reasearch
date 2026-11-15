@@ -62,13 +62,13 @@ American Apparel's specification sheet emphasizes fabric composition, fit, const
 
 ## 3. Competitor Comparison
 
-| Brand | Main product emphasis | Information presented |
-| --- | --- | --- |
-| UNIQLO | Minimalist everyday essential | Cotton jersey, regular fit, layering |
-| Hanes | Comfort and durability | Heavyweight cotton, stitching, roomier fit |
-| Gildan | Straightforward basic | Classic fit, fabric details, size range |
-| American Apparel | Fabric and construction | Fabric composition, seams, measurements |
-| Everyday | Simple everyday wear | Product details still need to be finalized |
+| Brand            | Main product emphasis         | Information presented                      |
+| ---------------- | ----------------------------- | ------------------------------------------ |
+| UNIQLO           | Minimalist everyday essential | Cotton jersey, regular fit, layering       |
+| Hanes            | Comfort and durability        | Heavyweight cotton, stitching, roomier fit |
+| Gildan           | Straightforward basic         | Classic fit, fabric details, size range    |
+| American Apparel | Fabric and construction       | Fabric composition, seams, measurements    |
+| Everyday         | Simple everyday wear          | Product details still need to be finalized |
 
 These descriptions summarize the brands' published product information. They do not prove that one shirt is objectively better than another.
 
@@ -116,16 +116,16 @@ These hypotheses should be checked with actual feedback before being treated as 
 
 ## 6. Evidence, Assumptions, and Open Questions
 
-| Type | Statement | Status |
-| --- | --- | --- |
-| Evidence | UNIQLO describes heavyweight cotton jersey and a regular fit. | Check the linked product page. |
-| Evidence | Hanes describes heavyweight cotton, stitching details, and a roomier fit. | Check the linked product page. |
-| Evidence | Gildan provides product information about fabric, fit, and sizes. | Check the linked product page. |
-| Evidence | American Apparel's specification sheet provides fabric and measurement details. | Check the linked specification sheet. |
-| Assumption | Some visitors may prefer a minimalist presentation. | Persona hypothesis, not customer research. |
-| Assumption | Clear sizing and material details may help visitors decide. | Design hypothesis to test. |
-| Open question | What are Everyday's actual fabric, fit, measurements, and price? | Confirm before publishing product claims. |
-| Open question | Which audience and brand position work best? | Requires feedback from real intended users. |
+| Type          | Statement                                                                       | Status                                      |
+| ------------- | ------------------------------------------------------------------------------- | ------------------------------------------- |
+| Evidence      | UNIQLO describes heavyweight cotton jersey and a regular fit.                   | Check the linked product page.              |
+| Evidence      | Hanes describes heavyweight cotton, stitching details, and a roomier fit.       | Check the linked product page.              |
+| Evidence      | Gildan provides product information about fabric, fit, and sizes.               | Check the linked product page.              |
+| Evidence      | American Apparel's specification sheet provides fabric and measurement details. | Check the linked specification sheet.       |
+| Assumption    | Some visitors may prefer a minimalist presentation.                             | Persona hypothesis, not customer research.  |
+| Assumption    | Clear sizing and material details may help visitors decide.                     | Design hypothesis to test.                  |
+| Open question | What are Everyday's actual fabric, fit, measurements, and price?                | Confirm before publishing product claims.   |
+| Open question | Which audience and brand position work best?                                    | Requires feedback from real intended users. |
 
 **Research limitation:** This review checks published product information. It does not document a complete checkout journey, measure competitor website usability, or include customer interviews. Add those findings only after performing those activities.
 
