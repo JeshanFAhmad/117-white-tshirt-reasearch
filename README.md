@@ -1,6 +1,14 @@
 # IS117 Brand Studio
 
-# Website Link: [https://github.com/JeshanFAhmad/is117-my-brand-studio](https://jeshanfahmad.github.io/is117-my-brand-studio/)
+## Project Documents
+
+- [T-shirt Research](Research.md)
+- [Project Specification and Next-Phase Plan](SPEC.md#next-phase-plan-everyday-white-t-shirt-storefront)
+
+## Website
+
+- [Live Everyday Website](https://jeshanfahmad.github.io/is117-my-brand-studio/)
+- [Website Source Repository](https://github.com/JeshanFAhmad/is117-my-brand-studio)
 
 **The same white T-shirt can carry very different meanings.** Develop a brand for it with an AI collaborator, then make those decisions visible in a professional website and a live style guide.
 
