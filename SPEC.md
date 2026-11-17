@@ -106,6 +106,102 @@ Write a short result and link only evidence that exists. A passing browser check
 
 **Logo proposal (learner review pending):** [Daily Fold SVG](public/assets/everyday-daily-fold.svg), shown in the [isolated review page](public/explorations/everyday-logo-review.html) and now used in the storefront and guide. Automated tests confirm the guide uses that SVG; review of the logo at actual size remains pending.
 
+## Next-Phase Plan: Everyday White T-Shirt Storefront
+
+### Project Goal
+
+The next phase of Everyday will improve the white T-shirt shopping experience by adding a more complete shopping process. The goal is to make it easy for visitors to understand the product, choose a size, review their bag, and complete a simulated checkout.
+
+The next phase will also introduce a SQLite database to store order information. This is a planned feature and has not been implemented yet.
+
+### Target Audience
+
+The primary audience is everyday dressers who prefer simple, understated clothing. They want a straightforward shopping experience and may not want clothing that draws too much attention.
+
+The secondary audience is people who like minimalist clothing but still want opportunities to express their personal style.
+
+### Two Possible Website Approaches
+
+**Approach A: Product-First Storefront**
+
+This approach focuses on the white T-shirt itself. The page would prioritize the product image, price, available sizes, and important product information. Visitors could quickly select a size and add the shirt to their shopping bag.
+
+**Approach B: Minimalist Lifestyle Storefront**
+
+This approach presents the T-shirt as a simple everyday wardrobe item. It would use a clean layout, neutral colors, styling suggestions, and clear product information. Visitors could explore outfit ideas while still having easy access to the price and size selection.
+
+**Preferred Approach: B**
+
+Approach B is the preferred direction because it supports Everyday's minimalist brand identity while giving visitors more ways to interact with the product. Product details and shopping controls will remain easy to find. This preference is based on the existing brand direction and has not yet been tested with customers.
+
+### User Stories
+
+1. As a visitor, I want to view the white T-shirt and its price so I can understand what is being offered.
+2. As a visitor, I want to select my preferred size so I can choose the version I want.
+3. As a visitor, I want to add the shirt to my shopping bag so I can review my selection.
+4. As a visitor, I want to see simple styling suggestions so I can consider how to wear the shirt.
+5. As a visitor, I want to complete a simulated checkout and have my order saved so I can see that the shopping process worked.
+
+### Essential Features and Observable Checks
+
+| Feature | What it should do | How it will be checked |
+|---|---|---|
+| Product display | Show the white T-shirt, price, and available information | Confirm the product and price appear correctly |
+| Size selection | Let visitors choose a shirt size | Select different sizes and confirm the selected size is shown |
+| Shopping bag | Let visitors add and review their selection | Add the shirt and confirm the correct item and size appear |
+| Styling suggestions | Display optional outfit suggestions | Select a styling option and confirm its matching suggestion appears |
+| Simulated checkout | Allow visitors to enter sample checkout information and submit a test order | Submit a test order and confirm a success message appears |
+| SQLite database | Save completed test orders | Confirm the order is stored and remains available after restarting the application |
+
+### Brand Promise and Visual Choices
+
+Everyday's brand promise is: "Comfortable, simple T-shirts for everyday wear."
+
+The website will continue using a minimalist visual direction with a neutral color palette, simple typography, and an uncluttered layout. The current palette includes paper `#f7f7f3`, ink `#171a18`, muted `#56605a`, line `#c9cec6`, accent `#e2e8de`, and soft `#e8eae1`.
+
+The Daily Fold logo concept and existing Everyday identity will be carried forward. The design should keep the product easy to understand without unnecessary visual distractions.
+
+### Ethical Persuasion
+
+The website will continue using two existing persuasion techniques:
+
+**1. Reciprocity:** Provide a free styling suggestion before asking visitors to make a shopping decision. This gives visitors something useful without requiring a purchase.
+
+**2. Commitment and Consistency:** Let visitors choose between keeping their outfit understated or adding more expression. The website will show a matching suggestion based on their choice.
+
+Both techniques are optional and should help visitors explore the product without pressuring them.
+
+### Simulated Checkout and SQLite Backend
+
+The next phase will include a simulated checkout. Visitors will be able to review their shopping bag, enter sample checkout information, and submit a test order.
+
+The checkout will not process real payments or collect real payment information.
+
+A SQLite database will store the test order information. The planned database tables are:
+
+- **Products:** Stores product information such as the shirt name and price.
+- **Orders:** Stores each submitted test order and its order details.
+- **Order Items:** Stores the products and quantities associated with each order.
+
+The database will be checked by submitting a test order, restarting the application, and confirming that the order information remains saved.
+
+### Verification Plan
+
+The next phase will be considered successful when:
+
+- Visitors can view the product and select a size.
+- Visitors can add the product to their shopping bag.
+- Styling suggestions respond to the visitor's choice.
+- A simulated checkout can be completed.
+- Test orders are saved in SQLite.
+- Saved orders remain available after restarting the application.
+
+These checks will be performed after the features are implemented.
+
+### AI Assistance
+
+ChatGPT was used to help organize and draft the next-phase plan, user stories, feature descriptions, and verification checks. The plan will be reviewed and edited by the student before submission.
+
 ## Later
 
 No follow-up is selected. After keeping `BRAND-001`, choose one next cycle: perhaps a brand story, a supported fit guide, or richer demo-bag behavior. Agree its scope and add one new spec ID at that time.
