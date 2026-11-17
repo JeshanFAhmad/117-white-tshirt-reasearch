@@ -4,6 +4,8 @@ This is the durable agreement between the learner and agent. Keep it concise and
 
 [LEARNING.md](LEARNING.md) holds the short, reviewable record of learner explanations and help received. Keep the brand decisions and implementation evidence here; link rather than duplicate them.
 
+**Related GitHub issue:** [PLAN-002: Add simulated checkout and SQLite persistence](PASTE-YOUR-NEW-ISSUE-URL-HERE)
+
 ## Current stage
 
 - Stage: BRAND-001 storefront and style-guide implementation applied; learner review and Keep evidence remain pending.
