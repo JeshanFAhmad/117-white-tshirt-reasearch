@@ -1,6 +1,6 @@
 # Brand Studio decisions
 
-This is the durable agreement between the learner and agent. Keep it concise and update it only with agreed choices or actual evidence. `Not chosen yet` is a valid status. Persona cards are hypotheses unless supported by real research.
+This is the durable agreement between the learner and agent. Keep it concise and update it only with agreed choices or actual evidence. `Not chosen yet` is a valid status. Persona cards are hypotheses unless supported by real research. 
 
 [LEARNING.md](LEARNING.md) holds the short, reviewable record of learner explanations and help received. Keep the brand decisions and implementation evidence here; link rather than duplicate them.
 
@@ -23,7 +23,7 @@ The primary need guides the page. Give the secondary card one contrasting need t
 
 | Tiny card                             | Primary audience                                                                                           | Secondary audience                                                                  |
 | ------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| Person in a concrete situation        | Everyday dressers; earlier hypothesis: a casual-day wearer who prefers understated designs                 | Person wanting individuality and visual expression; wearing situation not specified |
+| Person in a concrete situation        | College students in need of a subtle shirt for lectures and around campus. |
 | Goal or meaning they seek             | Everyday wear, comfort, and simplicity (learner-stated promise; comfort is not verified as a product fact) | Individuality and visual expression (learner-stated need)                           |
 | Concern before choosing               | Earlier learner-stated concern: standing out too much in public                                            | Not chosen yet                                                                      |
 | What the page should help them decide | Not chosen yet                                                                                             | Not chosen yet                                                                      |
