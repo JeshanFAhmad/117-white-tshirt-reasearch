@@ -1,4 +1,3 @@
-
 # Everyday – Project Documentation
 
 ## Project Overview
@@ -20,13 +19,13 @@ The website is designed around a minimalist brand identity. It allows users to s
 
 ## Product Information
 
-| Detail | Information |
-|---|---|
-| Brand | Everyday |
-| Product | White Crew-Neck T-Shirt |
-| Price | $28.00 |
-| Available Sizes | S, M, L, XL |
-| Payment | Simulated checkout only |
+| Detail          | Information             |
+| --------------- | ----------------------- |
+| Brand           | Everyday                |
+| Product         | White Crew-Neck T-Shirt |
+| Price           | $28.00                  |
+| Available Sizes | S, M, L, XL             |
+| Payment         | Simulated checkout only |
 
 ## Website Versions
 
@@ -47,26 +46,33 @@ Both versions use the same product information, pricing, validation rules, and o
 ## Main Features
 
 ### Product Selection
+
 Users can select from four available shirt sizes: S, M, L, and XL.
 
 ### Quantity Selection
+
 Users can choose how many shirts they want to purchase. The website should prevent quantities that are zero, negative, or invalid.
 
 ### Shopping Cart
+
 The cart displays the selected product, size, quantity, and calculated total.
 
 ### Price Calculation
+
 The total is calculated using the product price multiplied by the selected quantity.
 
 For example:
+
 - 1 shirt = $28.00
 - 2 shirts = $56.00
 - 3 shirts = $84.00
 
 ### Simulated Checkout
+
 Users can review their order and complete a simulated checkout. The process does not collect real payment information.
 
 ### SQLite Database
+
 SQLite is used to store completed order information. The database should retain saved records after the application is closed and reopened.
 
 ## Testing and Verification

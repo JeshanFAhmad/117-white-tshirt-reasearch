@@ -1,4 +1,3 @@
-
 import { DatabaseSync } from "node:sqlite";
 import { readFileSync, mkdirSync } from "node:fs";
 import path from "node:path";
@@ -14,10 +13,7 @@ const db = new DatabaseSync(path.join(dataDir, "store.db"));
 
 db.exec("PRAGMA foreign_keys = ON");
 
-const schema = readFileSync(
-    path.join(currentDir, "schema.sql"),
-    "utf8"
-);
+const schema = readFileSync(path.join(currentDir, "schema.sql"), "utf8");
 
 db.exec(schema);
 

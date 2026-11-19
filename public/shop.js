@@ -1,4 +1,3 @@
-
 "use strict";
 
 (() => {
@@ -58,8 +57,7 @@
 
     const itemWord = bag.length === 1 ? "item" : "items";
 
-    bagStatus.textContent =
-      `Added a white T-shirt in size ${selected.value}. Your demo bag has ${bag.length} ${itemWord}.`;
+    bagStatus.textContent = `Added a white T-shirt in size ${selected.value}. Your demo bag has ${bag.length} ${itemWord}.`;
 
     checkoutStatus.textContent = "";
   });
@@ -116,16 +114,12 @@
 
       bag.length = 0;
 
-      bagStatus.textContent =
-        "Your demo bag is empty. Your order was saved.";
+      bagStatus.textContent = "Your demo bag is empty. Your order was saved.";
 
-      checkoutStatus.textContent =
-        `Demo order #${result.orderId} saved successfully. Total: $${Number(result.total).toFixed(2)}.`;
-
+      checkoutStatus.textContent = `Demo order #${result.orderId} saved successfully. Total: $${Number(result.total).toFixed(2)}.`;
     } catch (error) {
       checkoutStatus.textContent =
         error.message || "Something went wrong. Please try again.";
-
     } finally {
       checkingOut = false;
       checkoutButton.textContent = "Place demo order";
@@ -140,14 +134,10 @@
 
   styleChoices.forEach((choice) => {
     choice.addEventListener("click", () => {
-      const understated =
-        choice.dataset.styleChoice === "understated";
+      const understated = choice.dataset.styleChoice === "understated";
 
       styleChoices.forEach((option) => {
-        option.setAttribute(
-          "aria-pressed",
-          String(option === choice),
-        );
+        option.setAttribute("aria-pressed", String(option === choice));
       });
 
       styleSuggestion.textContent = understated

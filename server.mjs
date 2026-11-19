@@ -1,4 +1,3 @@
-
 import { createServer } from "node:http";
 import { readFile, realpath } from "node:fs/promises";
 import { fileURLToPath, pathToFileURL } from "node:url";
@@ -51,11 +50,15 @@ async function readJsonBody(request) {
 }
 
 function getOrders() {
-  const orders = db.prepare(`
+  const orders = db
+    .prepare(
+      `
     SELECT id, order_date, total
     FROM Orders
     ORDER BY id DESC
-  `).all();
+  `,
+    )
+    .all();
 
   const getItems = db.prepare(`
     SELECT size, quantity, price
@@ -76,9 +79,9 @@ function saveOrder(items) {
     throw new Error("Please provide valid order items.");
   }
 
-  const product = db.prepare(
-    "SELECT id, price FROM Products WHERE id = ?",
-  ).get(1);
+  const product = db
+    .prepare("SELECT id, price FROM Products WHERE id = ?")
+    .get(1);
 
   if (!product) {
     throw new Error("The product was not found.");
@@ -95,19 +98,17 @@ function saveOrder(items) {
     }
   }
 
-  const total = Math.round(
-    items.reduce(
-      (sum, item) => sum + product.price * item.quantity,
-      0,
-    ) * 100,
-  ) / 100;
+  const total =
+    Math.round(
+      items.reduce((sum, item) => sum + product.price * item.quantity, 0) * 100,
+    ) / 100;
 
   db.exec("BEGIN");
 
   try {
-    const orderResult = db.prepare(
-      "INSERT INTO Orders (total) VALUES (?)",
-    ).run(total);
+    const orderResult = db
+      .prepare("INSERT INTO Orders (total) VALUES (?)")
+      .run(total);
 
     const orderId = Number(orderResult.lastInsertRowid);
 

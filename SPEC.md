@@ -1,6 +1,6 @@
 # Brand Studio decisions
 
-This is the durable agreement between the learner and agent. Keep it concise and update it only with agreed choices or actual evidence. `Not chosen yet` is a valid status. Persona cards are hypotheses unless supported by real research. 
+This is the durable agreement between the learner and agent. Keep it concise and update it only with agreed choices or actual evidence. `Not chosen yet` is a valid status. Persona cards are hypotheses unless supported by real research.
 
 [LEARNING.md](LEARNING.md) holds the short, reviewable record of learner explanations and help received. Keep the brand decisions and implementation evidence here; link rather than duplicate them.
 
@@ -21,13 +21,13 @@ The product is the same white T-shirt throughout the comparison. The baseline of
 
 The primary need guides the page. Give the secondary card one contrasting need to check that same page; keep both cards brief.
 
-| Tiny card                             | Primary audience                                                                                           | Secondary audience                                                                  |
-| ------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| Person in a concrete situation        | College students in need of a subtle shirt for lectures and around campus. |
-| Goal or meaning they seek             | Everyday wear, comfort, and simplicity (learner-stated promise; comfort is not verified as a product fact) | Individuality and visual expression (learner-stated need)                           |
-| Concern before choosing               | Earlier learner-stated concern: standing out too much in public                                            | Not chosen yet                                                                      |
-| What the page should help them decide | Not chosen yet                                                                                             | Not chosen yet                                                                      |
-| Evidence or assumption                | Learner-provided hypothesis; earlier AI rationale adopted after a hint; both remain unvalidated            | Learner-provided contrast; not validated                                            |
+| Tiny card                             | Primary audience                                                                                           | Secondary audience                                        |
+| ------------------------------------- | ---------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
+| Person in a concrete situation        | College students in need of a subtle shirt for lectures and around campus.                                 |
+| Goal or meaning they seek             | Everyday wear, comfort, and simplicity (learner-stated promise; comfort is not verified as a product fact) | Individuality and visual expression (learner-stated need) |
+| Concern before choosing               | Earlier learner-stated concern: standing out too much in public                                            | Not chosen yet                                            |
+| What the page should help them decide | Not chosen yet                                                                                             | Not chosen yet                                            |
+| Evidence or assumption                | Learner-provided hypothesis; earlier AI rationale adopted after a hint; both remain unvalidated            | Learner-provided contrast; not validated                  |
 
 ## Early brand brief
 
@@ -146,14 +146,14 @@ Approach B is the preferred direction because it supports Everyday's minimalist 
 
 ### Essential Features and Observable Checks
 
-| Feature | What it should do | How it will be checked |
-|---|---|---|
-| Product display | Show the white T-shirt, price, and available information | Confirm the product and price appear correctly |
-| Size selection | Let visitors choose a shirt size | Select different sizes and confirm the selected size is shown |
-| Shopping bag | Let visitors add and review their selection | Add the shirt and confirm the correct item and size appear |
-| Styling suggestions | Display optional outfit suggestions | Select a styling option and confirm its matching suggestion appears |
-| Simulated checkout | Allow visitors to enter sample checkout information and submit a test order | Submit a test order and confirm a success message appears |
-| SQLite database | Save completed test orders | Confirm the order is stored and remains available after restarting the application |
+| Feature             | What it should do                                                           | How it will be checked                                                             |
+| ------------------- | --------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| Product display     | Show the white T-shirt, price, and available information                    | Confirm the product and price appear correctly                                     |
+| Size selection      | Let visitors choose a shirt size                                            | Select different sizes and confirm the selected size is shown                      |
+| Shopping bag        | Let visitors add and review their selection                                 | Add the shirt and confirm the correct item and size appear                         |
+| Styling suggestions | Display optional outfit suggestions                                         | Select a styling option and confirm its matching suggestion appears                |
+| Simulated checkout  | Allow visitors to enter sample checkout information and submit a test order | Submit a test order and confirm a success message appears                          |
+| SQLite database     | Save completed test orders                                                  | Confirm the order is stored and remains available after restarting the application |
 
 ### Brand Promise and Visual Choices
 
